@@ -10,6 +10,8 @@ CachyOS에서 가장 쉽고 강력한 선택은 **Ollama**입니다.
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
+sudo systemctl enable --now ollama
+ollama pull qwen2.5-coder:14b
 ```
 
 설치 후 서비스 시작:
@@ -96,3 +98,12 @@ aider --model ollama/qwen2.5-coder:14b \
 
 Continue.dev  →  질문/탐색/단일 파일 작업  (VS Code 안)
 Aider         →  페이지 단위 파일 세트 생성 (터미널)
+
+## 내가 실행 해 본 순서.
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+sudo systemctl enable --now ollama
+ollama pull qwen2.5-coder:14b
+ollama run qwen2.5-coder:14b
+```
