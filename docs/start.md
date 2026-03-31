@@ -106,4 +106,8 @@ curl -fsSL https://ollama.com/install.sh | sh
 sudo systemctl enable --now ollama
 ollama pull qwen2.5-coder:14b
 ollama run qwen2.5-coder:14b
+
+GNewbyModelfile 만듬
+ollama create g-newby -f GNewbyModelfile
+ollama run g-newby
 ```
