@@ -59,3 +59,20 @@ ss -tnlp | grep 11434
 
 
 
+4. 업그레이드 
+
+- open-webui를 업그레이드 해야할 필요가 있을 때
+```
+# 1. 최신 open-webui 이미지 다운로드
+docker compose -f /data/docker/docker-compose.yml pull open-webui
+
+# 2. 다른 컨테이너(postgres, gxt-demo) 중단 없이 open-webui만 재생성 및 기동
+docker compose -f /data/docker/docker-compose.yml up -d open-webui
+
+# 확인
+# 1. 상태 확인 (CREATED 시간 갱신 확인)
+docker compose -f /data/docker/docker-compose.yml ps open-webui
+
+# 2. 실시간 시작 로그 확인
+docker logs -f open-webui
+```
